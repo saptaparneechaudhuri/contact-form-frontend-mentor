@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* .radio::before {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: hsl(169, 82%, 27%);
+    display: none;
+  }
+
+  .radio:checked::before {
+    display: block;
+  } */
+}
+
+@layer utilities {
+  .form-input {
+    @apply border-2 cursor-pointer text-sm border-custom-grey-500 rounded-md p-2 w-full focus:outline-none focus:border-green-medium hover:border-green-medium placeholder-custom-grey-900;
+  }
+
+  .required {
+    @apply required:border-primary-red;
+  }
+
+  .error {
+    @apply mt-2 peer-required:visible text-pink-600 text-xs;
+  }
+
+  .label {
+    @apply block text-custom-grey-500 text-xs mb-2 capitalize;
+  }
+
+  .radio {
+    @apply w-4 h-4 appearance-none  border-2 rounded-full border-custom-grey-500 relative flex justify-center items-center checked:border-green-medium;
+  }
+
+  .radio-before {
+    @apply before:content-[""] before:absolute before:rounded-full before:w-2 before:h-2 before:opacity-0 before:bg-green-medium before:checked:opacity-100 before:transition-all;
+  }
+
+  .radio-label {
+    @apply capitalize text-sm text-custom-grey-900;
+  }
+
+  .radio-box {
+    @apply bg-custom-white p-2 col-span-3 rounded-md border-2 border-custom-grey-500 flex items-center gap-2 has-[:checked]:border-green-medium has-[:checked]:bg-green-light;
+  }
+
+  .check-box {
+    @apply cursor-pointer w-4 h-4 relative flex justify-center items-center appearance-none border-2 rounded-sm border-custom-grey-500 checked:border-green-medium checked:bg-green-medium;
+  }
+
+  .check-box-before {
+    @apply before:content-['\2713'] before:opacity-0  before:absolute before:text-custom-white before:checked:opacity-100 before:transition-all;
+  }
+
+  /* .checked {
+    @apply bg-green-light border-green-medium;
+  } */
+}

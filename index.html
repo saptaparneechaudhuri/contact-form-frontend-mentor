@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-green-light w-screen h-screen">
+    <div id="app" class="w-full h-full">
+      <main
+        class="main-container w-full h-full flex justify-center items-center"
+      >
+        <section class="form-container bg-custom-white md:w-2/5 p-8 rounded-lg">
+          <h1
+            class="capitalize text-custom-grey-900 font-semibold text-xl mb-5"
+          >
+            Contact form
+          </h1>
+          <form class="form grid auto-rows-min gap-x-2 gap-y-4">
+            <div class="form-item col-span-3">
+              <label class="label" for="first-name"
+                >First Name <span class="text-custom-grey-500">*</span></label
+              >
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                class="form-input peer"
+              />
+              <p class="hidden">This field is required.</p>
+            </div>
+
+            <div class="form-item col-span-3">
+              <label class="label" for="last-name"
+                >Last Name <span class="text-custom-grey-500">*</span></label
+              >
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                class="form-input peer"
+              />
+              <p class="hidden">This field is required.</p>
+            </div>
+
+            <div class="form-item col-span-6">
+              <label class="label" for="email"
+                >email <span class="text-custom-grey-500">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input peer"
+              />
+              <p class="hidden">Please provide a valid email address.</p>
+            </div>
+
+            <div
+              class="form-item col-span-6 grid grid-cols-subgrid auto-rows-min"
+            >
+              <label class="label col-span-6"
+                >Query type <span class="text-custom-grey-500">*</span></label
+              >
+              <div class="radio-box checked">
+                <input
+                  class="radio radio-before"
+                  type="radio"
+                  id="general"
+                  name="query"
+                  checked
+                />
+
+                <label for="general" class="radio-label">General Enquiry</label>
+              </div>
+
+              <div class="radio-box">
+                <input
+                  class="radio radio-before"
+                  type="radio"
+                  id="support"
+                  name="query"
+                />
+
+                <label for="support" class="radio-label">Support Request</label>
+              </div>
+            </div>
+
+            <div class="form-item col-span-6 grid grid-cols-subgrid">
+              <label class="label col-span-6" for="message"
+                >message <span class="text-custom-grey-500">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                class="form-input resize-none col-span-6 peer"
+              ></textarea>
+              <p class="hidden">This field is required.</p>
+            </div>
+
+            <div
+              class="form-item col-span-4 flex justify-start items-center gap-2 self-start py-2"
+            >
+              <input
+                class="check-box check-box-before peer"
+                type="checkbox"
+                id="checkbox"
+                name="checkbox"
+                checked
+              />
+
+              <label for="checkbox" class="text-xs text-custom-grey-900"
+                >I consent to being contacted by the team
+                <span class="text-custom-grey-500">*</span>
+                <p class="hidden">
+                  To submit this form, please consent to being contacted.
+                </p></label
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="col-span-6 bg-green-medium h-10 self-start rounded-md text-custom-white font-base font-semibold"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
