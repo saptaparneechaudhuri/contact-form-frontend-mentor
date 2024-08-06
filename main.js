@@ -23,4 +23,43 @@ import { setupCounter } from "./counter.js";
 
 // setupCounter(document.querySelector('#counter'))
 
-console.log($("h1").html());
+$("#form").validate({
+  rules: {
+    firstname: "required",
+    lastname: "required",
+    email: {
+      required: true,
+      email: true,
+    },
+    message: "required",
+    // checkbox: {
+    //   required: true,
+    // },
+  },
+  messages: {
+    firstname: "This field is required.",
+    lastname: "This firld is required.",
+    email: {
+      required: "This field is required.",
+      email: "Please enter a valid email",
+    },
+    message: "This field is required",
+    // checkbox: "To submit this form, please consent to being contacted.",
+  },
+});
+
+$("#form").on("submit", function (e) {
+  e.preventDefault();
+  if (!$("#checkbox").is(":checked")) {
+    const errorMsg = $("#checkbox").next("label").children("p");
+    errorMsg.removeClass("hidden");
+    return;
+  }
+  const formDataArr = [...new FormData(this)];
+  const formData = Object.fromEntries(formDataArr);
+  console.log(formData);
+  //   alert("Form submitted");
+  console.log($("#form")[0]);
+  //   this.reset(); // resets form field
+  $(".form-container").load("thanks.html");
+});

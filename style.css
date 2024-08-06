@@ -28,7 +28,7 @@
   }
 
   .error {
-    @apply mt-2 peer-required:visible text-pink-600 text-xs;
+    @apply mt-2  text-pink-600 text-xs;
   }
 
   .label {

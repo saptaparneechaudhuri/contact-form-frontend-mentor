@@ -12,9 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+      integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
   </head>
   <body class="bg-green-light w-screen h-screen">
@@ -28,18 +34,18 @@
           >
             Contact form
           </h1>
-          <form class="form grid auto-rows-min gap-x-2 gap-y-4">
+          <form class="form grid auto-rows-min gap-x-2 gap-y-4" id="form">
             <div class="form-item col-span-3">
               <label class="label" for="first-name"
                 >First Name <span class="text-custom-grey-500">*</span></label
               >
               <input
                 type="text"
-                id="first-name"
-                name="first-name"
+                id="firstname"
+                name="firstname"
                 class="form-input peer"
               />
-              <p class="hidden">This field is required.</p>
+              <!-- <p class="hidden error">This field is required.</p> -->
             </div>
 
             <div class="form-item col-span-3">
@@ -48,11 +54,11 @@
               >
               <input
                 type="text"
-                id="last-name"
-                name="last-name"
+                id="lastname"
+                name="lastname"
                 class="form-input peer"
               />
-              <p class="hidden">This field is required.</p>
+              <!-- <p class="hidden error">This field is required.</p> -->
             </div>
 
             <div class="form-item col-span-6">
@@ -65,7 +71,7 @@
                 name="email"
                 class="form-input peer"
               />
-              <p class="hidden">Please provide a valid email address.</p>
+              <!-- <p class="hidden error">Please provide a valid email address.</p> -->
             </div>
 
             <div
@@ -80,6 +86,7 @@
                   type="radio"
                   id="general"
                   name="query"
+                  value="general"
                   checked
                 />
 
@@ -92,6 +99,7 @@
                   type="radio"
                   id="support"
                   name="query"
+                  value="support"
                 />
 
                 <label for="support" class="radio-label">Support Request</label>
@@ -107,7 +115,7 @@
                 name="message"
                 class="form-input resize-none col-span-6 peer"
               ></textarea>
-              <p class="hidden">This field is required.</p>
+              <!-- <p class="hidden error">This field is required.</p> -->
             </div>
 
             <div
@@ -124,7 +132,7 @@
               <label for="checkbox" class="text-xs text-custom-grey-900"
                 >I consent to being contacted by the team
                 <span class="text-custom-grey-500">*</span>
-                <p class="hidden">
+                <p class="hidden error">
                   To submit this form, please consent to being contacted.
                 </p></label
               >
