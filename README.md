@@ -2,12 +2,12 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 
 ### Screenshot
 
-![](./screenshot-1.jpg)
+![](./screenshot-1.jpeg)
 
 ### Links
 
 - Solution URL: [https://github.com/saptaparneechaudhuri/contact-form-frontend-mentor]
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://contactform-frontend-mentor.netlify.app/]
 
 ## Built with
 
