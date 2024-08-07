@@ -38,7 +38,7 @@ $("#form").validate({
   },
   messages: {
     firstname: "This field is required.",
-    lastname: "This firld is required.",
+    lastname: "This field is required.",
     email: {
       required: "This field is required.",
       email: "Please enter a valid email",
@@ -59,7 +59,26 @@ $("#form").on("submit", function (e) {
   const formData = Object.fromEntries(formDataArr);
   console.log(formData);
   //   alert("Form submitted");
-  console.log($("#form")[0]);
-  //   this.reset(); // resets form field
-  $(".form-container").load("thanks.html");
+  //   console.log($("#form")[0]);
+  console.log($(this)); // $(this) is jquery element on which jquery functions could be called
+  if ($(this).valid()) {
+    this.reset(); // (this ) is the html element, and reset() is called on html element. $(this).reset() won't work
+    $(".form-container").load("thanks.html");
+  }
+  //
+  //
+
+  //   $.ajax({
+  //     type: "post",
+  //     url: $(this).attr("action"),
+  //     data: formData,
+  //     contentType: "application/x-www-form-urlencoded",
+  //     success: function (responseData, textStatus, jqXHR) {
+  //       this.reset();
+  //       $(".form-container").load("thanks.html");
+
+  //       //    alert("data saved");
+  //     },
+  //     error: function (jqXHR, textStatus, errorThrown) {},
+  //   });
 });
