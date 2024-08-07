@@ -48,7 +48,7 @@
   }
 
   .radio-box {
-    @apply bg-custom-white p-2 col-span-3 rounded-md border-2 border-custom-grey-500 flex items-center gap-2 has-[:checked]:border-green-medium has-[:checked]:bg-green-light;
+    @apply bg-custom-white p-2 md:col-span-3 col-span-full rounded-md border-2 border-custom-grey-500 flex items-center gap-2   has-[:checked]:border-green-medium has-[:checked]:bg-green-light;
   }
 
   .check-box {
