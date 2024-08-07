@@ -26,8 +26,18 @@
   <body class="bg-green-light w-screen h-screen">
     <div id="app" class="w-full h-full">
       <main
-        class="main-container w-full h-full flex justify-center items-center"
+        class="main-container h-full flex flex-col justify-center items-center"
       >
+        <div
+          class="toast hidden absolute top-2 text-custom-white font-semibold text-base md:w-2/5 h-fit bg-custom-grey-900 p-5 rounded-md"
+        >
+          <p class="mb-3 flex gap-2">
+            <img src="/icon-success-check.svg" alt="success" />Message Sent!
+          </p>
+          <p class="text-xs opacity-50">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
         <section class="form-container bg-custom-white md:w-2/5 p-8 rounded-lg">
           <h1
             class="capitalize text-custom-grey-900 font-semibold text-xl mb-5"

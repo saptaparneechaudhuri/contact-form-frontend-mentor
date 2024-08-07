@@ -63,7 +63,12 @@ $("#form").on("submit", function (e) {
   console.log($(this)); // $(this) is jquery element on which jquery functions could be called
   if ($(this).valid()) {
     this.reset(); // (this ) is the html element, and reset() is called on html element. $(this).reset() won't work
-    $(".form-container").load("thanks.html");
+    // $(".form-container").load("thanks.html");
+    $(".toast").slideDown("slow");
+
+    setTimeout(() => {
+      $(".toast").slideUp("slow");
+    }, 1800);
   }
   //
   //
